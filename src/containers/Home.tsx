@@ -1,7 +1,10 @@
+import { useRef } from 'react';
 import { Grid, Avatar, Typography, IconButton } from "@mui/material";
-import { Mail, LinkedIn, GitHub } from '@mui/icons-material';
+import { Mail, LinkedIn, GitHub, PictureAsPdf } from '@mui/icons-material';
 
 function Home() {
+  const downloadLink = useRef<HTMLAnchorElement | null>(null);
+
   const contactLinks = [
     {
       name: "linkedin",
@@ -15,6 +18,10 @@ function Home() {
       name: "mail",
       link: "mailto:javivasv@gmail.com",
     },
+    {
+      name: "resume",
+      link: "",
+    },
   ]
 
   const LinkIcon = (name: string) => {
@@ -25,13 +32,22 @@ function Home() {
       return <LinkedIn />;
     case "github":
       return <GitHub />;
+    case "resume":
+      return <PictureAsPdf />;
     default:
       return <Mail />;
     }
   }
 
-  const HandleOpenLink = (link: string) => {
-    window.open(link);
+  const HandleOpenLink = (name: string, link: string) => {
+    if (name !== "resume") {
+      window.open(link);
+      return;
+    }
+
+    if (downloadLink.current) {
+      downloadLink.current.click();
+    }
   }
 
   return (
@@ -48,11 +64,17 @@ function Home() {
         <Grid className="link-buttons-row" container flexDirection={"row"} alignItems="center" justifyContent="center">
           {
             contactLinks.map((option) => (
-              <IconButton key={option.name} className="link-button" onClick={() => HandleOpenLink(option.link)}>
+              <IconButton key={option.name} className="link-button" onClick={() => HandleOpenLink(option.name, option.link)}>
                 { LinkIcon(option.name) }
               </IconButton>
             ))
           }
+          <a
+            href="src/documents/Javier Vivas - Resume.pdf"
+            download="Javier Vivas - Resume.pdf"
+            ref={downloadLink}
+            style={{ display: 'none' }}
+          />
         </Grid>
       </Grid>
     </Grid>
