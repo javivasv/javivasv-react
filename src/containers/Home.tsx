@@ -53,7 +53,7 @@ function Home() {
   return (
     <Grid id="home-container" className="section-container" container flexDirection={"row"}>
       <Grid id="avatar-container" container item flexDirection={"column"} alignContent="center" xs={12} md={5}>
-        <Avatar alt="Javier Vivas" src={`src/images/home/profile.jpg`} sx={{ width: "240px", height: "240px" }} />
+        <Avatar alt="Javier Vivas" src={`../images/home/profile.jpg`} sx={{ width: "240px", height: "240px" }} />
       </Grid>
       <Grid container item flexDirection={"column"} alignContent="center" xs={12} md={7} alignSelf="center">
         <Grid container flexDirection={"row"} justifyContent="center">
@@ -70,7 +70,7 @@ function Home() {
             ))
           }
           <a
-            href="src/documents/Javier Vivas - Resume.pdf"
+            href="../documents/Javier Vivas - Resume.pdf"
             download="Javier Vivas - Resume.pdf"
             ref={downloadLink}
             style={{ display: 'none' }}

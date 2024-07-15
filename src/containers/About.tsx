@@ -83,7 +83,7 @@ function About() {
             <CardMedia
               component="img"
               alt=""
-              src={`src/images/about/image.jpg`}
+              src={`../images/about/image.jpg`}
               sx={{
                 objectFit: "contain"
               }}

@@ -85,7 +85,7 @@ function Projects() {
                         className="project-image"
                         component="img"
                         alt={image}
-                        src={`src/images/projects/ndb/${image}.png`}
+                        src={`../images/projects/ndb/${image}.png`}
                         sx={{
                           objectFit: "contain"
                         }}

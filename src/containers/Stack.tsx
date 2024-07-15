@@ -92,7 +92,7 @@ function Stack() {
                 <Grid container flexDirection={"row"} alignItems="center">
                   <img
                     className="stack-image"
-                    src={`src/images/stack/${item.icon}.png`}
+                    src={`../images/stack/${item.icon}.png`}
                     alt={item.name}
                   />
                   <Typography variant="body1">
