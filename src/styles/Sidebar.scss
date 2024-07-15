@@ -1,0 +1,13 @@
+@import "../variables.scss";
+
+#sidebar-floating-button {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+}
+
+.sidebar-item:hover {
+  .sidebar-icon {
+    color: $primary-color;
+  }
+}

@@ -40,12 +40,12 @@ function Home() {
         <Avatar alt="Javier Vivas" src={`src/images/home/profile.jpg`} sx={{ width: "240px", height: "240px" }} />
       </Grid>
       <Grid container item flexDirection={"column"} alignContent="center" xs={12} md={7} alignSelf="center">
-        <Grid className="about-text-container" container flexDirection={"row"} justifyContent="center">
+        <Grid container flexDirection={"row"} justifyContent="center">
           <Typography variant="h3">
             Hey, I'm Javier
           </Typography>
         </Grid>
-        <Grid container flexDirection={"row"} alignItems="center" justifyContent="center">
+        <Grid className="link-buttons-row" container flexDirection={"row"} alignItems="center" justifyContent="center">
           {
             contactLinks.map((option) => (
               <IconButton key={option.name} className="link-button" onClick={() => HandleOpenLink(option.link)}>

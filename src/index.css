@@ -1,5 +1,10 @@
 @import "./App.scss";
+@import "./styles/Home.scss";
+@import "./styles/About.scss";
+@import "./styles/Stack.scss";
+@import "./styles/Projects.scss";
 @import "./styles/ThinScrollbar.scss";
+@import "./styles/Timeline.scss";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

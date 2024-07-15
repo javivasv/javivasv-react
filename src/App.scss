@@ -38,24 +38,12 @@
   width: 100%;
 }
 
-#sidebar-floating-button {
-  position: fixed;
-  top: 12px;
-  left: 12px;
-}
-
 #large-content-container {
   width: calc(100% - 200px);
 }
 
 #small-content-container {
   width: 100%;
-}
-
-.sidebar-item:hover {
-  .sidebar-icon {
-    color: $primary-color;
-  }
 }
 
 .section-container {
@@ -92,107 +80,12 @@
   color: $primary-color;
 }
 
+.link-buttons-row {
+  padding: 12px 0px;
+}
 
 .link-button {
   width: 40px;
   height: 40px;
   margin-right: 12px !important;
-}
-
-// Timeline items
-.vertical-timeline-element-icon {
-  color: white;
-  background: $secondary-color;
-}
-
-.vertical-timeline-element-content {
-  color: white;
-  background: #202020;
-}
-
-// Home
-#home-container {
-  padding: 72px 48px 72px 48px;
-  background: linear-gradient(180deg, #2b8b0fbf, #252525);
-}
-
-#avatar-container{
-  padding: 24px 0px;
-}
-
-.contact-image {
-  width: 20px;
-  height: 20px;
-}
-
-// About
-.about-col {
-  padding: 24px 0px;
-}
-
-.about-text-container {
-  padding: 8px 0px;
-}
-
-.empty-space {
-  flex-grow: 1;
-}
-
-#about-image-container {
-  padding: 0px 24px;
-}
-
-.about-image-card {
-  max-width: 400px;
-}
-
-#contact-container {
-  padding-left: 24px;
-}
-
-.contact-info {
-  padding: 12px 0px;
-}
-
-.contact-icon {
-  margin-right: 12px;
-}
-
-// Education
-
-// Experience
-.experience-item {
-  padding-bottom: 16px;
-}
-
-// Stack
-.stack-col {
-  padding: 8px;
-}
-
-.stack-image {
-  width: 48px;
-  margin-right: 12px;
-}
-
-// Projects
-.project-name {
-  padding-bottom: 12px;
-}
-
-.project-container {
-  padding-bottom: 24px;
-}
-
-.project-card {
-  width: fit-content;
-}
-
-.project-images-carousel {
-  width: 100%;
-  text-align: -webkit-center;
-}
-
-.project-image {
-  max-height: 380px;
 }

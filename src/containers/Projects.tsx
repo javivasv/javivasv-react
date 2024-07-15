@@ -61,12 +61,12 @@ function Projects() {
         <SectionTitle section="Projects" />
         <Grid className="section-content-container" container item flexDirection={"row"}>
           <Grid className="project-container" container item flexDirection={"column"} xs={12} md={6}>
-            <Grid className="project-name" container item flexDirection={"row"}>
+            <Grid container item flexDirection={"row"}>
               <Typography variant="h5">
                 Nuzlocke DataBase
               </Typography>
             </Grid>
-            <Grid className="project-name" container item flexDirection={"row"}>
+            <Grid className="link-buttons-row" container item flexDirection={"row"}>
               {
                 ndbIcons.map((item) => (
                   <IconButton key={item.name} className="link-button" onClick={() => HandleOpenLink(item.link)}>
@@ -97,12 +97,12 @@ function Projects() {
             </Grid>
           </Grid>
           <Grid container item flexDirection={"column"} xs={12} md={6}>
-            <Grid className="project-name" container item flexDirection={"row"}>
+            <Grid  container item flexDirection={"row"}>
               <Typography variant="h5">
                 Track To Power
               </Typography>
             </Grid>
-            <Grid className="project-name" container item flexDirection={"row"}>
+            <Grid className="link-buttons-row" container item flexDirection={"row"}>
               {
                 ttpIcons.map((item) => (
                   <IconButton key={item.name} className="link-button" onClick={() => HandleOpenLink(item.link)}>
