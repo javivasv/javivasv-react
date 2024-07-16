@@ -2,14 +2,19 @@ import { Grid, Typography, Card, CardMedia, IconButton } from "@mui/material";
 import { CatchingPokemon, Code, DataObject } from '@mui/icons-material';
 import SectionTitle from "../components/SectionTitle";
 import Carousel from 'react-material-ui-carousel'
+import homeDesktop from "../images/projects/ndb/home-desktop.png"
+import homeMobile from "../images/projects/ndb/home-mobile.png"
+import nuzlockeDesktop from "../images/projects/ndb/nuzlocke-desktop.png"
+import nuzlockeMobile from "../images/projects/ndb/nuzlocke-mobile.png"
+import loginDesktop from "../images/projects/ndb/login-desktop.png"
 
 function Projects() {
   const ndbImages = [
-    "home-desktop",
-    "home-mobile",
-    "nuzlocke-desktop",
-    "nuzlocke-mobile",
-    "login-desktop",
+    homeDesktop,
+    homeMobile,
+    nuzlockeDesktop,
+    nuzlockeMobile,
+    loginDesktop,
   ];
 
   const ndbIcons = [
@@ -85,7 +90,7 @@ function Projects() {
                         className="project-image"
                         component="img"
                         alt={image}
-                        src={`../images/projects/ndb/${image}.png`}
+                        src={image}
                         sx={{
                           objectFit: "contain"
                         }}

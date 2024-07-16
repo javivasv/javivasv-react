@@ -1,83 +1,102 @@
 import { Grid, Typography } from "@mui/material";
 import SectionTitle from "../components/SectionTitle";
+import typescript from "../images/stack/typescript.png"
+import javascript from "../images/stack/javascript.png"
+import html from "../images/stack/html.png"
+import css from "../images/stack/css.png"
+import react from "../images/stack/react.png"
+import redux from "../images/stack/redux.png"
+import materialui from "../images/stack/materialui.png"
+import vue from "../images/stack/vue.png"
+import vuex from "../images/stack/vuex.png"
+import vuetify from "../images/stack/vuetify.png"
+import jest from "../images/stack/jest.png"
+import vite from "../images/stack/vite.png"
+import vitest from "../images/stack/vitest.png"
+import node from "../images/stack/node.png"
+import mongodb from "../images/stack/mongodb.png"
+import python from "../images/stack/python.png"
+import django from "../images/stack/django.png"
+import angular from "../images/stack/angular.png"
+import java from "../images/stack/java.png"
 
 function Stack() {
   const stack = [
     {
       name: "TypeScript",
-      icon: "typescript",
+      icon: typescript,
     },
     {
       name: "JavaScript",
-      icon: "javascript",
+      icon: javascript,
     },
     {
       name: "HTML",
-      icon: "html",
+      icon: html,
     },
     {
       name: "CSS",
-      icon: "css",
+      icon: css,
     },
     {
       name: "ReactJS",
-      icon: "react",
+      icon: react,
     },
     {
       name: "Redux",
-      icon: "redux",
+      icon: redux,
     },
     {
       name: "Material UI",
-      icon: "materialui",
+      icon: materialui,
     },
     {
       name: "VueJS",
-      icon: "vue",
+      icon: vue,
     },
     {
       name: "Vuex",
-      icon: "vuex",
+      icon: vuex,
     },
     {
       name: "Vuetify",
-      icon: "vuetify",
+      icon: vuetify,
     },
     {
       name: "Jest",
-      icon: "jest",
+      icon: jest,
     },
     {
       name: "Vite",
-      icon: "vite",
+      icon: vite,
     },
     {
       name: "Vitest",
-      icon: "vitest",
+      icon: vitest,
     },
     {
       name: "NodeJS",
-      icon: "node",
+      icon: node,
     },
     {
       name: "MongoDB",
-      icon: "mongodb",
+      icon: mongodb,
     },
     {
       name: "Python",
-      icon: "python",
+      icon: python,
     },
     {
       name: "Django",
-      icon: "django",
+      icon: django,
     },
     {
       name: "AngularJS",
-      icon: "angular",
+      icon: angular,
     },
     {
       name: "Java",
-      icon: "java",
+      icon: java,
     },
   ]
 
@@ -92,7 +111,7 @@ function Stack() {
                 <Grid container flexDirection={"row"} alignItems="center">
                   <img
                     className="stack-image"
-                    src={`../images/stack/${item.icon}.png`}
+                    src={item.icon}
                     alt={item.name}
                   />
                   <Typography variant="body1">

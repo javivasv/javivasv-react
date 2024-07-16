@@ -1,6 +1,7 @@
 import { Grid, Typography, Card, CardMedia } from "@mui/material";
 import { LocationOn, Call, Mail } from '@mui/icons-material';
 import SectionTitle from "../components/SectionTitle";
+import image from "../images/about/image.jpg";
 
 function About() {
   const contactInfo = [
@@ -83,7 +84,7 @@ function About() {
             <CardMedia
               component="img"
               alt=""
-              src={`../images/about/image.jpg`}
+              src={image}
               sx={{
                 objectFit: "contain"
               }}
