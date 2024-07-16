@@ -12,8 +12,8 @@ function SidebarContent(props: Props) {
   const sidebarItems = [
     "Home",
     "About",
-    "Education",
     "Experience",
+    "Education",
     "Stack",
     "Projects",
   ]
@@ -24,10 +24,10 @@ function SidebarContent(props: Props) {
       return <Home className="sidebar-icon" />;
     case "About":
       return <Info className="sidebar-icon" />;
-    case "Education":
-      return <School className="sidebar-icon" />;
     case "Experience":
       return <Work className="sidebar-icon" />;
+    case "Education":
+      return <School className="sidebar-icon" />;
     case "Stack":
       return <Code className="sidebar-icon" />;
     case "Projects":
