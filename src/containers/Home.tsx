@@ -1,10 +1,15 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Grid, Avatar, Typography, IconButton } from "@mui/material";
 import { Mail, LinkedIn, GitHub, PictureAsPdf } from '@mui/icons-material';
 import profile from "../images/home/profile.jpg";
 
 function Home() {
   const downloadLink = useRef<HTMLAnchorElement | null>(null);
+  const [height, setHeight] = useState<number>(window.innerHeight);
+
+  useEffect(() => {
+    setHeight(window.innerHeight);
+  }, []);
 
   const contactLinks = [
     {
@@ -52,8 +57,8 @@ function Home() {
   }
 
   return (
-    <Grid id="home-container" className="section-container" container flexDirection={"row"}>
-      <Grid id="avatar-container" container item flexDirection={"column"} alignContent="center" xs={12} md={5}>
+    <Grid id="home-container" className="section-container" sx={{ height: `${height}px` }} container flexDirection={"row"}>
+      <Grid id="avatar-container" container item flexDirection={"column"} alignContent="center" alignSelf="center" xs={12} md={5}>
         <Avatar alt="Javier Vivas" src={profile} sx={{ width: "240px", height: "240px" }} />
       </Grid>
       <Grid container item flexDirection={"column"} alignContent="center" xs={12} md={7} alignSelf="center">
