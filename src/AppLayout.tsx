@@ -10,6 +10,10 @@ import Stack from "./containers/Stack";
 import Projects from "./containers/Projects";
 import { sections } from './enums';
 
+
+import ParticlesComp from './components/Particles';
+
+
 function AppLayout() {
   const isMdAndUp = useMediaQuery('(min-width:900px)');
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -35,6 +39,7 @@ function AppLayout() {
 
   return (
     <Grid className="h-100" container flexDirection={"row"}>
+      <ParticlesComp />
       <Sidebar HandleScroll={HandleScroll} ToggleSidebar={ToggleSidebar} open={openSidebar} isMdAndUp={isMdAndUp} />
       <Grid id={isMdAndUp ? "large-content-container" : "small-content-container"} className="h-100 thin-scrollbar" container item flexDirection={"column"} wrap="nowrap">
         {
@@ -43,12 +48,12 @@ function AppLayout() {
             <Menu />
           </IconButton>
         }
-        <div ref={sectionRefs.home}><Home /></div>
-        <div ref={sectionRefs.about}><About /></div>
-        <div ref={sectionRefs.experience}><Experience /></div>
-        <div ref={sectionRefs.education}><Education /></div>
-        <div ref={sectionRefs.stack}><Stack /></div>
-        <div ref={sectionRefs.projects}><Projects /></div>
+        <div ref={sectionRefs.home} className="section"><Home /></div>
+        <div ref={sectionRefs.about} className="section"><About /></div>
+        <div ref={sectionRefs.experience} className="section"><Experience /></div>
+        <div ref={sectionRefs.education} className="section"><Education /></div>
+        <div ref={sectionRefs.stack} className="section"><Stack /></div>
+        <div ref={sectionRefs.projects} className="section"><Projects /></div>
       </Grid>
     </Grid>
   )

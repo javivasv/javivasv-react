@@ -58,11 +58,11 @@ function Home() {
       </Grid>
       <Grid container item flexDirection={"column"} alignContent="center" xs={12} md={7} alignSelf="center">
         <Grid container flexDirection={"row"} justifyContent="center">
-          <Typography variant="h3">
+          <Typography id="home-title" variant="h3">
             Hey, I'm Javier
           </Typography>
         </Grid>
-        <Grid className="link-buttons-row" container flexDirection={"row"} alignItems="center" justifyContent="center">
+        <Grid container flexDirection={"row"} alignItems="center" justifyContent="center">
           {
             contactLinks.map((option) => (
               <IconButton key={option.name} className="link-button" onClick={() => HandleOpenLink(option.name, option.link)}>

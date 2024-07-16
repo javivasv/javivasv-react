@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { useMediaQuery, Grid, Typography } from "@mui/material";
 import SectionTitle from "../components/SectionTitle";
 import typescript from "../images/stack/typescript.png"
 import javascript from "../images/stack/javascript.png"
@@ -21,6 +21,8 @@ import angular from "../images/stack/angular.png"
 import java from "../images/stack/java.png"
 
 function Stack() {
+  const is500 = useMediaQuery('(max-width:500px)');
+
   const stack = [
     {
       name: "TypeScript",
@@ -101,22 +103,25 @@ function Stack() {
   ]
 
   return (
-    <Grid className="section-container dark-to-light" container flexDirection={"row"}>
+    <Grid className="section-container" container flexDirection={"row"}>
       <Grid container item flexDirection={"column"}>
         <SectionTitle section="Stack" />
         <Grid className="section-content-container" container item flexDirection={"row"}>
           {
             stack.map((item) => 
               <Grid className="stack-col" key={item.name} container item flexDirection={"column"} xs={6} md={4} lg={3}>
-                <Grid container flexDirection={"row"} alignItems="center">
+                <Grid container flexDirection={"row"} alignItems="center" justifyContent={is500 ? "center" : "start"}>
                   <img
                     className="stack-image"
                     src={item.icon}
                     alt={item.name}
                   />
-                  <Typography variant="body1">
-                    { item.name }
-                  </Typography>
+                  {
+                    !is500 &&
+                    <Typography variant="body1">
+                      { item.name }
+                    </Typography>
+                  }
                 </Grid>
               </Grid>
             )

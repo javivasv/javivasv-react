@@ -9,37 +9,44 @@ import nuzlockeMobile from "../images/projects/ndb/nuzlocke-mobile.png"
 import loginDesktop from "../images/projects/ndb/login-desktop.png"
 
 function Projects() {
-  const ndbImages = [
-    homeDesktop,
-    homeMobile,
-    nuzlockeDesktop,
-    nuzlockeMobile,
-    loginDesktop,
-  ];
-
-  const ndbIcons = [
+  const projects = [
     {
-      name: "website",
-      link: "https://nuzlockedatabase.com/",
+      name: "Nuzlocke DataBase",
+      images: [
+        homeDesktop,
+        homeMobile,
+        nuzlockeDesktop,
+        nuzlockeMobile,
+        loginDesktop,
+      ],
+      links: [
+        {
+          name: "website",
+          link: "https://nuzlockedatabase.com/",
+        },
+        {
+          name: "front",
+          link: "https://github.com/javivasv/nuzlocke-database-v2-client-react",
+        },
+        {
+          name: "back",
+          link: "https://github.com/javivasv/nuzlocke-database-v2-server",
+        },
+      ],
     },
     {
-      name: "front",
-      link: "https://github.com/javivasv/nuzlocke-database-v2-client-react",
-    },
-    {
-      name: "back",
-      link: "https://github.com/javivasv/nuzlocke-database-v2-server",
-    },
-  ]
-
-  const ttpIcons = [
-    {
-      name: "front",
-      link: "https://github.com/AvilaCrest-Software/track-to-power-frontend",
-    },
-    {
-      name: "back",
-      link: "https://github.com/AvilaCrest-Software/track-to-power-backend",
+      name: "Track To Power",
+      images: [],
+      links: [
+        {
+          name: "front",
+          link: "https://github.com/AvilaCrest-Software/track-to-power-frontend",
+        },
+        {
+          name: "back",
+          link: "https://github.com/AvilaCrest-Software/track-to-power-backend",
+        },
+      ],
     },
   ]
 
@@ -61,67 +68,63 @@ function Projects() {
   }
 
   return (
-    <Grid className="section-container light-to-dark" container flexDirection={"row"}>
+    <Grid className="section-container" container flexDirection={"row"}>
       <Grid container item flexDirection={"column"}>
         <SectionTitle section="Projects" />
         <Grid className="section-content-container" container item flexDirection={"row"}>
-          <Grid className="project-container" container item flexDirection={"column"} xs={12} md={6}>
-            <Grid container item flexDirection={"row"}>
-              <Typography variant="h5">
-                Nuzlocke DataBase
-              </Typography>
-            </Grid>
-            <Grid className="link-buttons-row" container item flexDirection={"row"}>
-              {
-                ndbIcons.map((item) => (
-                  <IconButton key={item.name} className="link-button" onClick={() => HandleOpenLink(item.link)}>
-                    { ButtonIcon(item.name) }
-                  </IconButton>
-                ))
-              }
-            </Grid>
-            <Grid container item flexDirection={"row"}>
-              <Carousel className="project-images-carousel" fullHeightHover={false}>
-                {
-                  ndbImages.map((image) => (
-                    <Card key={image} className="project-card">
-                      <CardMedia
-                        key={image}
-                        className="project-image"
-                        component="img"
-                        alt={image}
-                        src={image}
-                        sx={{
-                          objectFit: "contain"
-                        }}
-                      />
-                    </Card>
-                  ))
-                }
-              </Carousel>
-            </Grid>
-          </Grid>
-          <Grid container item flexDirection={"column"} xs={12} md={6}>
-            <Grid  container item flexDirection={"row"}>
-              <Typography variant="h5">
-                Track To Power
-              </Typography>
-            </Grid>
-            <Grid className="link-buttons-row" container item flexDirection={"row"}>
-              {
-                ttpIcons.map((item) => (
-                  <IconButton key={item.name} className="link-button" onClick={() => HandleOpenLink(item.link)}>
-                    { ButtonIcon(item.name) }
-                  </IconButton>
-                ))
-              }
-            </Grid>
-            <Grid className="project-image-container" container item flexDirection={"row"} justifyContent="center">
-              <Typography variant="h4">
-                Coming soon
-              </Typography>
-            </Grid>
-          </Grid>
+          {
+            projects.map((project) => (
+              <Grid key={project.name} className="project-container" container item flexDirection={"column"} xs={12} md={6}>
+                <Grid className="project-title-container" container item flexDirection={"row"}>
+                  <Typography variant="h5">
+                    { project.name }
+                  </Typography>
+                </Grid>
+                <Grid className="project-card-container" container item flexDirection={"row"}>
+                  <Card className="project-card">
+                    <Grid container item flexDirection={"row"}>
+                      {
+                        project.links.map((item) => (
+                          <IconButton key={item.name} className="link-button" onClick={() => HandleOpenLink(item.link)}>
+                            { ButtonIcon(item.name) }
+                          </IconButton>
+                        ))
+                      }
+                    </Grid>
+                    <Grid className="carousel-container" container item flexDirection={"row"} justifyContent="center">
+                      {
+                        project.images.length > 0 &&
+                        <Carousel className="project-images-carousel" fullHeightHover={false}>
+                          {
+                            project.images.map((image) => (
+                              <Card key={image} className="project-images-card">
+                                <CardMedia
+                                  key={image}
+                                  className="project-image"
+                                  component="img"
+                                  alt={image}
+                                  src={image}
+                                  sx={{
+                                    objectFit: "contain"
+                                  }}
+                                />
+                              </Card>
+                            ))
+                          }
+                        </Carousel>
+                      }
+                      {
+                        project.images.length === 0 &&
+                        <Typography variant="h4">
+                          Coming soon
+                        </Typography>
+                      }
+                    </Grid>
+                  </Card>
+                </Grid>
+              </Grid>
+            ))
+          }
         </Grid>
       </Grid>
     </Grid>

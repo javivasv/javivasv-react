@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { useMediaQuery, Grid, Typography } from "@mui/material";
 import { Work } from '@mui/icons-material';
 import SectionTitle from "../components/SectionTitle";
 
@@ -6,6 +6,8 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 
 function Experience() {
+  const isXs = useMediaQuery('(max-width:600px)');
+
   const experienceItems = [
     {
       title: "Frontend Engineer",
@@ -28,7 +30,7 @@ function Experience() {
   ];
 
   return (
-    <Grid className="section-container dark-to-light" container flexDirection={"row"}>
+    <Grid className="section-container" container flexDirection={"row"}>
       <Grid container item flexDirection={"column"}>
         <SectionTitle section="Experience" />
         <Grid className="section-content-container" container item flexDirection={"row"}>
@@ -45,18 +47,29 @@ function Experience() {
                   <Grid container item flexDirection={"row"}>
                     <Grid container item flexDirection={"column"} xs={12}>
                       <Grid container item flexDirection={"row"} justifyContent="space-between">
-                        <Typography variant="body1">
+                        <Typography className="font-bold" variant="body1">
                           { item.title }
                         </Typography>
-                        <Typography variant="body1">
-                          { item.location }
-                        </Typography>
+                        {
+                          !isXs &&
+                          <Typography variant="body1">
+                            { item.location }
+                          </Typography>
+                        }
                       </Grid>
                       <Grid container item flexDirection={"row"} justifyContent="space-between">
                         <Typography variant="body1">
                           { item.company }
                         </Typography>
                       </Grid>
+                      {
+                        isXs &&
+                        <Grid container item flexDirection={"row"}>
+                          <Typography variant="body1">
+                            { item.location }
+                          </Typography>
+                        </Grid>
+                      }
                     </Grid>
                   </Grid>
                 </VerticalTimelineElement>

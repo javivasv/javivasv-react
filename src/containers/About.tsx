@@ -33,14 +33,14 @@ function About() {
   }
 
   return (
-    <Grid className="section-container light-to-dark" container flexDirection={"row"}>
+    <Grid className="section-container" container flexDirection={"row"}>
       <Grid container item flexDirection={"column"}>
         <SectionTitle section="About" />
       </Grid>
       <Grid className="section-content-container" container item flexDirection={"row"} justifyContent="center">
         <Grid className="about-col" container item flexDirection={"column"} alignContent="center" xs={12} md={7}>
           <Grid className="about-text-container" container flexDirection={"row"}>
-            <Typography variant="h5">
+            <Typography className="font-bold" variant="h5">
               Javier Vivas
             </Typography>
           </Grid>

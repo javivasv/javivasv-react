@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 
 const basicPalette = {
   primary: {
-    main: '#3fc915be',
+    main: '#3fc915',
   },
   secondary: {
     main: '#1685C5',

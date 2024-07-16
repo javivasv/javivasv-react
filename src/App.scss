@@ -48,14 +48,10 @@
 
 .section-container {
   padding: 36px 48px 24px 48px;
+}
 
-  &.light-to-dark {
-    background: linear-gradient(180deg, #252525, #121212);
-  }
-
-  &.dark-to-light {
-    background: linear-gradient(180deg, #121212, #252525);
-  }
+.section {
+  z-index: 0;
 }
 
 .section-title-container {
@@ -77,15 +73,15 @@
 
 .website-link {
   text-decoration: none;
-  color: $primary-color;
-}
-
-.link-buttons-row {
-  padding: 12px 0px;
+  color: $secondary-color;
 }
 
 .link-button {
   width: 40px;
   height: 40px;
   margin-right: 12px !important;
+}
+
+.font-bold {
+  font-weight: bold !important;
 }

@@ -1,6 +1,7 @@
-import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
+import { Grid, Avatar, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { Home, Info, School, Work, Code, Folder } from '@mui/icons-material';
 import { sections } from "../enums";
+import profile from "../images/home/profile.jpg";
 
 interface Props {
   HandleScroll: (e: sections) => void;
@@ -46,20 +47,25 @@ function SidebarContent(props: Props) {
   }
 
   return (
-    <List>
-      {
-        sidebarItems.map((item) => (
-          <ListItem className="sidebar-item" key={item} disablePadding>
-            <ListItemButton onClick={() => ScrollToSection(item)}>
-              <ListItemIcon>
-                { ItemIcon(item) }
-              </ListItemIcon>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))
-      }
-    </List>
+    <>
+      <Grid id="sidebar-avatar" container flexDirection={"row"} justifyContent="center">
+        <Avatar alt="Javier Vivas" src={profile} sx={{ width: "48px", height: "48px" }} />
+      </Grid>
+      <List>
+        {
+          sidebarItems.map((item) => (
+            <ListItem className="sidebar-item" key={item} disablePadding>
+              <ListItemButton onClick={() => ScrollToSection(item)}>
+                <ListItemIcon>
+                  { ItemIcon(item) }
+                </ListItemIcon>
+                <ListItemText primary={item} />
+              </ListItemButton>
+            </ListItem>
+          ))
+        }
+      </List>
+    </>
   )
 }
 

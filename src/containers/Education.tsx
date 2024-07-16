@@ -45,7 +45,7 @@ function Education() {
   ];
 
   return (
-    <Grid className="section-container light-to-dark" container flexDirection={"row"}>
+    <Grid className="section-container" container flexDirection={"row"}>
       <Grid container item flexDirection={"column"}>
         <SectionTitle section="Education" />
         <Grid className="section-content-container" container item flexDirection={"row"}>
@@ -59,7 +59,7 @@ function Education() {
                   icon={item.license ? <WorkspacePremium /> : <School />}
                 >
                   <Grid container item flexDirection={"row"}>
-                    <Typography variant="body1">
+                    <Typography className="font-bold" variant="body1">
                       { item.name }
                     </Typography>
                   </Grid>
