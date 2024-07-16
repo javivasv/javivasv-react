@@ -76,7 +76,7 @@ function Home() {
             ))
           }
           <a
-            href="../documents/Javier Vivas - Resume.pdf"
+            href="/Javier Vivas - Resume.pdf"
             download="Javier Vivas - Resume.pdf"
             ref={downloadLink}
             style={{ display: 'none' }}

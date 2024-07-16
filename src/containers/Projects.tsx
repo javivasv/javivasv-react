@@ -82,7 +82,7 @@ function Projects() {
                 </Grid>
                 <Grid className="project-card-container" container item flexDirection={"row"}>
                   <Card className="project-card">
-                    <Grid container item flexDirection={"row"}>
+                    <Grid className="project-links" container item flexDirection={"row"}>
                       {
                         project.links.map((item) => (
                           <IconButton key={item.name} className="link-button" onClick={() => HandleOpenLink(item.link)}>
