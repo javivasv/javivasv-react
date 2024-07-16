@@ -115,7 +115,7 @@ function Projects() {
                       }
                       {
                         project.images.length === 0 &&
-                        <Typography variant="h4">
+                        <Typography className="coming-soon" variant="h4">
                           Coming soon
                         </Typography>
                       }

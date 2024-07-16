@@ -7,7 +7,7 @@ function About() {
   const contactInfo = [
     {
       name: "address",
-      data: "Davenport, Florida, United States",
+      data: "Davenport, Fl, United States",
     },
     {
       name: "phone",
