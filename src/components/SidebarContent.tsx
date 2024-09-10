@@ -1,7 +1,7 @@
 import { Grid, Avatar, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { Home, Info, School, Work, Code, Folder } from '@mui/icons-material';
 import { sections } from "../enums";
-import profile from "../images/home/profile.jpg";
+import profile from "../images/home/profile.png";
 
 interface Props {
   HandleScroll: (e: sections) => void;

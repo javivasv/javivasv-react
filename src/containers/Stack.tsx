@@ -19,6 +19,8 @@ import python from "../images/stack/python.png"
 import django from "../images/stack/django.png"
 import angular from "../images/stack/angular.png"
 import java from "../images/stack/java.png"
+import csharp from "../images/stack/csharp.png"
+import aspnet from "../images/stack/aspnet.png"
 
 function Stack() {
   const is500 = useMediaQuery('(max-width:500px)');
@@ -99,6 +101,14 @@ function Stack() {
     {
       name: "Java",
       icon: java,
+    },
+    {
+      name: "C#",
+      icon: csharp,
+    },
+    {
+      name: "ASP.NET",
+      icon: aspnet,
     },
   ]
 

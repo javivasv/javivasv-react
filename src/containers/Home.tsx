@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { Grid, Avatar, Typography, IconButton } from "@mui/material";
 import { Mail, LinkedIn, GitHub, PictureAsPdf } from '@mui/icons-material';
-import profile from "../images/home/profile.jpg";
+import profile from "../images/home/profile.png";
 
 function Home() {
   const downloadLink = useRef<HTMLAnchorElement | null>(null);
