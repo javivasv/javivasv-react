@@ -7,7 +7,7 @@ function About() {
   const contactInfo = [
     {
       name: "address",
-      data: "Davenport, Fl, United States",
+      data: "Davenport, FL, United States",
     },
     {
       name: "phone",
@@ -46,7 +46,7 @@ function About() {
           </Grid>
           <Grid className="about-text-container" container flexDirection={"row"}>
             <Typography variant="body1">
-              I'm a Bachelor of Science in Computer Engineer graduated from
+              I'm a Bachelor of Science in Computer Engineering graduated from
               Universidad Simón Bolívar in Caracas, Venezuela. I currently live
               in Davenport, Florida, USA. I'm an American resident and a
               Venezuelan and Italian citizen. I speak both spanish and english.
