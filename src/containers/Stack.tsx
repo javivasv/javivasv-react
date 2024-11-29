@@ -43,7 +43,7 @@ function Stack() {
       icon: css,
     },
     {
-      name: "ReactJS",
+      name: "React",
       icon: react,
     },
     {
@@ -55,7 +55,7 @@ function Stack() {
       icon: materialui,
     },
     {
-      name: "VueJS",
+      name: "Vue",
       icon: vue,
     },
     {
@@ -95,7 +95,7 @@ function Stack() {
       icon: django,
     },
     {
-      name: "AngularJS",
+      name: "Angular",
       icon: angular,
     },
     {

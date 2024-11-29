@@ -55,7 +55,7 @@ function About() {
           <Grid className="about-text-container" container flexDirection={"row"}>
             <Typography variant="body1">
               As a software developer, I focus primarily in frontend development
-              using ReactJS and VueJS. Furthermore, I have experience in backend
+              using React and Vue. Furthermore, I have experience in backend
               development using NodeJS and in database management using MongoDB.
             </Typography>
           </Grid>
