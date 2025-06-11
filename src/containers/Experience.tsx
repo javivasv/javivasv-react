@@ -12,13 +12,13 @@ function Experience() {
     {
       title: "Front-End Developer - Angular",
       company: "Schneider Electric",
-      location: "Louisville, Kentucky, Unites States",
+      location: "Louisville, Kentucky, United States",
       dates: "Jan 2025 - Present",
     },
     {
       title: "Frontend Engineer",
       company: "JP Global Digital",
-      location: "Miami, Florida, Unites States",
+      location: "Miami, Florida, United States",
       dates: "Nov 2021 - June 2024",
     },
     {
