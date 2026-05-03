@@ -1,7 +1,7 @@
 import { Grid, Avatar, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { Home, Info, School, Work, Code, Folder } from '@mui/icons-material';
 import { sections } from "../enums";
-import profile from "../images/home/profile.png";
+import image from "../images/home/image.jpg";
 
 interface Props {
   HandleScroll: (e: sections) => void;
@@ -49,7 +49,7 @@ function SidebarContent(props: Props) {
   return (
     <>
       <Grid id="sidebar-avatar" container flexDirection={"row"} justifyContent="center">
-        <Avatar alt="Javier Vivas" src={profile} sx={{ width: "48px", height: "48px" }} />
+        <Avatar alt="Javier Vivas" src={image} sx={{ width: "48px", height: "48px" }} />
       </Grid>
       <List>
         {

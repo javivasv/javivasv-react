@@ -21,6 +21,8 @@ import angular from "../images/stack/angular.png"
 import java from "../images/stack/java.png"
 import csharp from "../images/stack/csharp.png"
 import aspnet from "../images/stack/aspnet.png"
+import copilot from "../images/stack/copilot.png"
+import cursor from "../images/stack/cursor.png"
 
 function Stack() {
   const is500 = useMediaQuery('(max-width:500px)');
@@ -109,6 +111,14 @@ function Stack() {
     {
       name: "ASP.NET",
       icon: aspnet,
+    },
+    {
+      name: "Copilot",
+      icon: copilot,
+    },
+    {
+      name: "Cursor",
+      icon: cursor,
     },
   ]
 

@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { Grid, Avatar, Typography, IconButton } from "@mui/material";
 import { Mail, LinkedIn, GitHub, PictureAsPdf } from '@mui/icons-material';
-import profile from "../images/home/profile.png";
+import image from "../images/home/image.jpg";
 
 function Home() {
   const downloadLink = useRef<HTMLAnchorElement | null>(null);
@@ -59,7 +59,7 @@ function Home() {
   return (
     <Grid id="home-container" className="section-container" sx={{ height: `${height}px` }} container flexDirection={"row"}>
       <Grid id="avatar-container" container item flexDirection={"column"} alignContent="center" alignSelf="center" xs={12} md={5}>
-        <Avatar alt="Javier Vivas" src={profile} sx={{ width: "240px", height: "240px" }} />
+        <Avatar alt="Javier Vivas" src={image} sx={{ width: "240px", height: "240px" }} />
       </Grid>
       <Grid container item flexDirection={"column"} alignContent="center" xs={12} md={7} alignSelf="center">
         <Grid container flexDirection={"row"} justifyContent="center">
