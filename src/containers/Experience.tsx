@@ -10,7 +10,7 @@ function Experience() {
 
   const experienceItems = [
     {
-      title: "Front-End Developer (Angular) - Software Engineer",
+      title: "Software Engineer",
       company: "Schneider Electric",
       location: "Louisville, Kentucky, United States",
       dates: "Jan 2025 - Apr 2026",
